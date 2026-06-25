@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Reset بسيط */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+/* Light/Dark variables */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  font-family: Inter, sans-serif;
+  line-height: 1.7;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+section {
+  position: relative;
+}
+/* Container system */
+.container-custom {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@layer components {
+  .container-xl {
+    @apply max-w-7xl mx-auto px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-20 lg:py-28;
+  }
+
+  .btn-primary {
+  @apply inline-flex items-center justify-center px-8 py-4 font-semibold bg-accent text-primary rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-gold;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center px-8 py-4 font-semibold border border-white rounded-lg text-white hover:bg-white hover:text-primary transition-all duration-300;
+}
+
+.btn-outline {
+  @apply inline-flex items-center justify-center px-8 py-4 font-semibold border border-primary rounded-lg text-primary hover:bg-primary hover:text-white transition-all duration-300;
+}
+
+  .text-gradient-gold {
+    background: linear-gradient(
+      135deg,
+      #D4A017 0%,
+      #E8B83D 50%,
+      #B8880D 100%
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+section {
+  position: relative;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(14,42,71,.95),
+      rgba(14,42,71,.75),
+      rgba(14,42,71,.45)
+    );
+}
