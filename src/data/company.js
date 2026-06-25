@@ -5,6 +5,7 @@ import ProjectsHero from '@/assets/images/projects/hero.jpg';
 import IndustriesHero from '@/assets/images/industries/hero.jpg';
 import HSEHero from '@/assets/images/hse/hero.png';
 
+
 export const COMPANY_IMAGES = {
   homeHero: HomeHero,
   aboutHero: AboutHero,
