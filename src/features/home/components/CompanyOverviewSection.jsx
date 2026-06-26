@@ -3,9 +3,9 @@
 import Link from 'next/link';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import { FadeIn, GoldLine, SectionLabel, SectionTitle, StaggerContainer, StaggerItem } from '../../../components/ui';
-
+import { COMPANY_IMAGES } from '@/data/company';
 import { strengths } from '../constants.js';
-
+import Image from 'next/image';
 export function CompanyOverviewSection() {
   return (
     <section className="section-padding bg-white overflow-hidden">
@@ -14,12 +14,21 @@ export function CompanyOverviewSection() {
           {/* Image side */}
           <FadeIn direction="left">
             <div className="relative">
-              <div className="aspect-[4/5] overflow-hidden bg-background">
-                <img
-                  src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&q=80"
-                  alt="AZAL Projects engineering team on site"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-                />
+              <div
+  className="
+  group
+  relative
+  aspect-[4/5]
+  overflow-hidden
+  bg-background
+  "
+>
+                <Image
+  src={COMPANY_IMAGES.aboutCompany}
+  alt="AZAL Projects engineering team"
+  fill
+  className="object-cover transition-transform duration-700 group-hover:scale-105"
+/>
               </div>
               {/* Floating stat card */}
               <div className="absolute -bottom-6 -right-6 bg-primary text-white p-6 w-48 shadow-xl">

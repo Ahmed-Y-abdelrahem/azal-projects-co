@@ -3,9 +3,7 @@ import {
   ContactInfo,
   ContactForm,
   OfficeLocations,
-  GoogleMap,
   FAQSection,
-  ContactCTA,
 } from '../../features/contact/index.js';
 
 export const metadata = {
@@ -25,11 +23,7 @@ export default function ContactPage() {
 
       <OfficeLocations />
 
-      <GoogleMap />
-
       <FAQSection />
-
-      <ContactCTA />
     </>
   );
 }

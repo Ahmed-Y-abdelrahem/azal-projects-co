@@ -13,7 +13,7 @@ export function ContactInfo() {
               Phone
             </h3>
 
-            <p>+966 XX XXX XXXX</p>
+            <p>+966 54 726 4860</p>
           </div>
 
           <div className="border p-8">
@@ -29,7 +29,7 @@ export function ContactInfo() {
               Office
             </h3>
 
-            <p>Riyadh, Saudi Arabia</p>
+            <p>Khobar, Saudi Arabia</p>
           </div>
 
         </div>

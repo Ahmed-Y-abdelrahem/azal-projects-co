@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-
+import Image from 'next/image';
 import {
   ArrowRight,
 } from 'lucide-react';
@@ -166,63 +166,41 @@ export function ServicesGrid() {
 
 
 
-                <div className="relative h-64 overflow-hidden">
+               <div className="relative h-64 overflow-hidden">
 
 
-                  <img
+<Image
 
-                    src={service.image}
+src={service.image}
 
-                    alt={service.title}
+alt={service.imageAlt}
 
-                    className="
-                    w-full
-                    h-full
-                    object-cover
-                    group-hover:scale-105
-                    transition-transform
-                    duration-700
-                    "
+fill
 
-                  />
+className="
+object-cover
+transition-transform
+duration-700
+group-hover:scale-105
+"
 
-
-
-                  <div
-
-                    className="
-                    absolute
-                    inset-0
-                    bg-gradient-to-t
-                    from-primary/70
-                    to-transparent
-                    "
-
-                  />
+/>
 
 
+<div
+
+className="
+absolute
+inset-0
+bg-gradient-to-t
+from-primary/70
+to-transparent
+"
+
+/>
 
 
-                  <div
-
-                    className="
-                    absolute
-                    bottom-5
-                    left-6
-                    text-white
-                    text-5xl
-                    font-black
-                    opacity-20
-                    "
-
-                  >
-
-                    0{index+1}
-
-                  </div>
-
-
-                </div>
+</div>
 
 
 

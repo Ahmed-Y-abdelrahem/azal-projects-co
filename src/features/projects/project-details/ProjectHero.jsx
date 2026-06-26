@@ -1,36 +1,81 @@
 'use client';
 
+import Image from 'next/image';
+
 export function ProjectHero({ project }) {
   return (
-    <section className="relative h-[70vh]">
+    <section className="relative h-[70vh] overflow-hidden">
 
-      <img
-        src={project.image}
-        alt={project.title}
-        className="absolute inset-0 w-full h-full object-cover"
-      />
+      <Image
+
+src={project.image}
+
+alt={project.imageAlt}
+
+fill
+
+priority
+
+className="
+object-cover
+"
+
+/>
 
       <div className="absolute inset-0 bg-black/60" />
 
-      <div className="relative z-10 h-full flex items-center">
+
+      <div className="
+      relative
+      z-10
+      h-full
+      flex
+      items-center
+      ">
 
         <div className="container-xl">
 
-          <span className="text-accent uppercase tracking-[3px]">
+          <span
+            className="
+            text-accent
+            uppercase
+            tracking-[3px]
+            text-sm
+            "
+          >
             {project.category}
           </span>
 
-          <h1 className="text-5xl text-white font-bold mt-4">
+
+          <h1
+            className="
+            text-5xl
+            lg:text-6xl
+            text-white
+            font-bold
+            mt-5
+            "
+          >
             {project.title}
           </h1>
 
-          <p className="text-white/70 mt-4">
+
+          <p
+            className="
+            text-white/70
+            mt-5
+            text-lg
+            "
+          >
             {project.location}
           </p>
 
+
         </div>
 
+
       </div>
+
 
     </section>
   );
